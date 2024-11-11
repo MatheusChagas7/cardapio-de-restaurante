@@ -37,7 +37,7 @@ export default function Home() {
               key={prato.id}
               nome={prato.nome}
               categoria={prato.categoria}
-              preco={prato.preco}
+              preco={prato.preco.toFixed(2)}
               descricao={prato.descricao}
               imagem={prato.imagem}
             />

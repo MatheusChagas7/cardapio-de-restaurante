@@ -34,7 +34,7 @@ export const produtos = [
     id: 1,
     nome: "Espaguete",
     categoria: "Massas",
-    preco: 20.0,
+    preco: 20.00,
     descricao:
       "Um delicioso espaguete que pode ser combinado com diversos molhos, como bolonhesa, carbonara, alho e oleo e pesto",
     imagem: espaguete,
@@ -43,7 +43,7 @@ export const produtos = [
     id: 2,
     nome: "Lasanha",
     categoria: "Massas",
-    preco: 25.0,
+    preco: 25.00,
     descricao:
       "Uma maravilhosa lasanha com recheios variados como carne moída, frango, presunto e queijo, legumos e molho branco ou vermelho",
     imagem: lasanha,
@@ -61,7 +61,7 @@ export const produtos = [
     id: 4,
     nome: "Capeletti",
     categoria: "Massas",
-    preco: 25.5,
+    preco: 25.50,
     descricao:
       "Uma massa simples servida com diversos tipos de molhos como bolonhesa, carbonara, alfredo, pesto ou manteiga e sálvia",
     imagem: capeletti,
@@ -79,7 +79,7 @@ export const produtos = [
     id: 6,
     nome: "Bruschetta",
     categoria: "Entradas",
-    preco: 9.2,
+    preco: 9.20,
     descricao:
       "Prato original da Itália, que leva fatias de pão italiano torrado, tomate picado, alho, manjericão e azeite",
     imagem: bruschetta,
@@ -88,7 +88,7 @@ export const produtos = [
     id: 7,
     nome: "Carpaccio",
     categoria: "Entradas",
-    preco: 32.0,
+    preco: 32.00,
     descricao:
       "Prato de origem francesa, que leva fatias finas de salmão cru, alcaparras, queijo parmesão ralado e molho mostarda",
     imagem: carpaccio,
@@ -97,7 +97,7 @@ export const produtos = [
     id: 8,
     nome: "Paella",
     categoria: "Entradas",
-    preco: 65.0,
+    preco: 65.00,
     descricao:
       "Um prato tipico do leste da Espanha, que leva arroz e frutos do mar como mariscos, polvo, camarões, mexilhões e lulas",
     imagem: paella,
@@ -106,7 +106,7 @@ export const produtos = [
     id: 9,
     nome: "Ebi Spicy",
     categoria: "Entradas",
-    preco: 62.0,
+    preco: 62.00,
     descricao:
       "Prato tipico do Japão, que leva camarões empanados em massa tempurá, maionese e molho picante",
     imagem: ebiSpicy,
@@ -258,7 +258,7 @@ export const produtos = [
     id: 26,
     nome: "Salada Ceasar",
     categoria: "Saladas",
-    preco: 19.8,
+    preco: 19.80,
     descricao:
       "Salada preparada com alface-romana, torrada, queijo parmesão e molho Ceasar",
     imagem: saladaCeasar,
@@ -267,7 +267,7 @@ export const produtos = [
     id: 27,
     nome: "Salada Caprese",
     categoria: "Saladas",
-    preco: 22.0,
+    preco: 22.00,
     descricao:
       "Uma salada italiana, feita com mussarela fresca, tomate e manjericão, temperada com sal e azeite",
     imagem: saladaCaprese,
@@ -276,7 +276,7 @@ export const produtos = [
     id: 28,
     nome: "Salada Waldorf",
     categoria: "Saladas",
-    preco: 40.0,
+    preco: 40.00,
     descricao:
       "Criada em 1893 no Waldorf Hotel, essa salada leva uma fatia de maça e aipo, nozes cortadas, maionese",
     imagem: saladaWaldorf,
