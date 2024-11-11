@@ -1,0 +1,40 @@
+
+.cotainer_pesquisa{
+   max-width: 1024px;
+   width: 100%;
+}
+
+.barra_pesquisa{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    padding-left: 50px;
+    
+    background-image: url("../../../../public/lupa.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 10px center;
+
+    border: 1px solid rgba(128, 128, 128, 0.158);
+    border-radius: 20px;
+}
+
+.barra_pesquisa:focus{
+    outline: none;
+    border: 1px solid gray;
+}
+
+
+@media(max-width: 768px){
+    .barra_pesquisa{
+        font-size: 12px;
+    }
+}
+
+
+@media(max-width: 425px){
+    .barra_pesquisa{
+        font-size: 10px;
+    }
+}

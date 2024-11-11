@@ -1,0 +1,34 @@
+.container_categorias{
+    max-width: 1024px;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.botao_categorias{
+    height: 40px;
+    width: 150px;
+
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.botao_categorias img{
+    height: 20px;
+    width: 20px;
+}
+
+.botao_categorias span{
+    height: 20px;
+    padding: 1px 0;
+    font-weight: 600;
+}
