@@ -32,3 +32,12 @@
     padding: 1px 0;
     font-weight: 600;
 }
+
+.botao_categorias:hover{
+    cursor: pointer;
+    background-color: #daa520;
+}
+
+.botao_categorias:active{
+    border: 1px solid #fff;
+}
