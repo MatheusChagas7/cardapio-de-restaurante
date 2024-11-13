@@ -81,6 +81,23 @@
 
 }
 
+
+/*PÁGINAÇÃO*/
+.paginacao{
+  display: flex;
+  gap: 20px;
+}
+
+
+.paginacao button{
+  background-color: #fff;
+  width: 50px;
+  height: auto;
+  font-size: 30px;
+  border: none;
+}
+
+
 @media(max-width: 768px){
 
   .container_topo{
