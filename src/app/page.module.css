@@ -105,6 +105,7 @@
 
 
 
+/*PÁGINAS ATÉ 768 PX*/
 @media(max-width: 768px){
 
   .container_topo{
@@ -123,6 +124,7 @@
 }
 
 
+/*PÁGINAS ATÉ 375PX*/
 @media(max-width: 375px){
 
   .container_topo{
