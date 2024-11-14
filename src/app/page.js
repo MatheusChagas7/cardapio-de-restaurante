@@ -15,6 +15,7 @@ import { retornaCardapio } from "./servico";
 export default function Home() {
 
   const [pratos, setPratos] = useState(retornaCardapio);
+  const [estadoCategoria, setEstadoCategoria] = useState(false);
   const [paginaAtual, setpaginaAtual] = useState(1);
   const pratosPorPaginas = 10;
   const totalDePaginas = Math.ceil(pratos.length / pratosPorPaginas);
@@ -43,10 +44,17 @@ export default function Home() {
       </header>
       <main className={estilos.main}>
 
-        <Categorias setPratos={setPratos} setpaginaAtual={setpaginaAtual}/>
+        <Categorias
+          setPratos={setPratos}
+          estadoCategoria={estadoCategoria}
+          setestadoCategoria={setEstadoCategoria}
+          setpaginaAtual={setpaginaAtual}
+        />
 
-        <CampoDeBusca setPratos={setPratos} setpaginaAtual={setpaginaAtual}/>
+        <CampoDeBusca setPratos={setPratos} />
         <h2>Cardápio</h2>
+
+        {/* Container do Cardápio */}
         <div className={estilos.container_cardapio}>
           {pratosExibidos.map((prato) =>
             <Card
@@ -59,6 +67,7 @@ export default function Home() {
             />
           )}
         </div>
+
         {/* Controles de Paginação */}
         <div className={estilos.paginacao}>
 
@@ -77,6 +86,7 @@ export default function Home() {
           </button>
 
         </div>
+
       </main>
     </div>
   );

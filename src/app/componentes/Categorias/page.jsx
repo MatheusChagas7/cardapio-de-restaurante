@@ -1,7 +1,7 @@
 'use client';
 import estilos from "./Categorias.module.css";
 import Image from "next/image";
-import { buscaCategoria } from "@/app/servico";
+import { buscaCategoria, retornaCardapio } from "@/app/servico";
 
 import iconeEntrada from "/public/entrada.png"
 import iconeMassa from "/public/massa.png"
@@ -10,11 +10,20 @@ import iconeBebidas from "/public/bebidas.png"
 import iconeSalada from "/public/salada.png"
 import iconeSobremesa from "/public/sobremesa.png"
 
-export default function Categorias({setPratos, setpaginaAtual}){
+export default function Categorias({setPratos, estadoCategoria, setestadoCategoria, setpaginaAtual}){
 
     function handleBuscaCategoria(categoria){
 
-        setPratos(buscaCategoria(categoria));
+        if(estadoCategoria){
+
+            setestadoCategoria(!estadoCategoria);
+            setPratos(retornaCardapio());
+
+        }else{
+            
+            setestadoCategoria(!estadoCategoria);
+            setPratos(buscaCategoria(categoria));
+        }
 
         setpaginaAtual(1);
 
