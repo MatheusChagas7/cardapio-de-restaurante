@@ -43,9 +43,9 @@ export default function Home() {
       </header>
       <main className={estilos.main}>
 
-        <Categorias setPratos={setPratos} />
+        <Categorias setPratos={setPratos} setpaginaAtual={setpaginaAtual}/>
 
-        <CampoDeBusca setPratos={setPratos} />
+        <CampoDeBusca setPratos={setPratos} setpaginaAtual={setpaginaAtual}/>
         <h2>Cardápio</h2>
         <div className={estilos.container_cardapio}>
           {pratosExibidos.map((prato) =>

@@ -10,11 +10,13 @@ import iconeBebidas from "/public/bebidas.png"
 import iconeSalada from "/public/salada.png"
 import iconeSobremesa from "/public/sobremesa.png"
 
-export default function Categorias({setPratos}){
+export default function Categorias({setPratos, setpaginaAtual}){
 
     function handleBuscaCategoria(categoria){
 
-        setPratos(buscaCategoria(categoria))
+        setPratos(buscaCategoria(categoria));
+
+        setpaginaAtual(1);
 
       }
 
