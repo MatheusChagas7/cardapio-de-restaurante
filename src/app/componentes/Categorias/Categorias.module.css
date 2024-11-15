@@ -22,22 +22,37 @@
     border-radius: 5px;
 }
 
-.botao_categorias img{
+.botao_categorias_ativo{
+    height: 40px;
+    width: 150px;
+    background-color: #daa520;
+
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.icone_categoria{
     height: 20px;
     width: 20px;
 }
 
-.botao_categorias span{
+.nome_categoria{
     height: 20px;
     padding: 1px 0;
     font-weight: 600;
 }
 
-.botao_categorias:hover{
+.container_categorias button:hover{
     cursor: pointer;
     background-color: #daa520;
 }
 
-.botao_categorias:active{
+.container_categorias button:active{
     border: 1px solid #fff;
 }

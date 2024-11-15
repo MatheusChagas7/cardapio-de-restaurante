@@ -1,4 +1,5 @@
 'use client';
+import { useState } from "react";
 import estilos from "./Categorias.module.css";
 import Image from "next/image";
 import { buscaCategoria, retornaCardapio } from "@/app/servico";
@@ -12,17 +13,25 @@ import iconeSobremesa from "/public/sobremesa.png"
 
 export default function Categorias({setPratos, estadoCategoria, setestadoCategoria, setpaginaAtual}){
 
-    function handleBuscaCategoria(categoria){
+    const [botaoAtivo, setBotaoAtivo] = useState(null);
+    
+    const estiloBotaoAtivo = estilos.botao_categorias_ativo;
+    const estiloBotao = estilos.botao_categorias
+    
+
+
+    function handleBuscaCategoria(categoria, idBotao){
 
         if(estadoCategoria){
 
             setestadoCategoria(!estadoCategoria);
             setPratos(retornaCardapio());
-
+            setBotaoAtivo(null);
         }else{
             
             setestadoCategoria(!estadoCategoria);
             setPratos(buscaCategoria(categoria));
+            setBotaoAtivo(idBotao)
         }
 
         setpaginaAtual(1);
@@ -32,34 +41,34 @@ export default function Categorias({setPratos, estadoCategoria, setestadoCategor
     return(
         <section className={estilos.container_categorias}>
 
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Entradas") } value="Entradas">
-                <Image src={iconeEntrada} alt="Ícone entradas"></Image>
-                <span>Entradas</span>
+            <button className={botaoAtivo === 1 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Entradas", 1) } value="Entradas">
+                <Image className={estilos.icone_categoria} src={iconeEntrada} alt="Ícone entradas"></Image>
+                <span className={estilos.nome_categoria}>Entradas</span>
             </button>
 
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Massas") } value="Massas">
-                <Image src={iconeMassa} alt="Ícone massas"></Image>
-                <span>Massas</span>
+            <button className={botaoAtivo === 2 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Massas", 2) } value="Massas">
+                <Image className={estilos.icone_categoria} src={iconeMassa} alt="Ícone massas"></Image>
+                <span className={estilos.nome_categoria}>Massas</span>
             </button>
 
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Carnes") } value="Carnes">
-                <Image src={iconeCarne} alt="Ícone carnes"></Image>
-                <span>Carnes</span>
+            <button className={botaoAtivo === 3 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Carnes", 3) } value="Carnes">
+                <Image className={estilos.icone_categoria} src={iconeCarne} alt="Ícone carnes"></Image>
+                <span className={estilos.nome_categoria}>Carnes</span>
             </button>
             
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Bebidas") } value="Bebidas">
-                <Image src={iconeBebidas} alt="Ícone bebidas"></Image>
-                <span>Bebibdas</span>
+            <button className={botaoAtivo === 4 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Bebidas", 4) } value="Bebidas">
+                <Image className={estilos.icone_categoria} src={iconeBebidas} alt="Ícone bebidas"></Image>
+                <span className={estilos.nome_categoria}>Bebibdas</span>
             </button>
 
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Saladas") } value="Saladas">
-                <Image src={iconeSalada} alt="Ícone saladas"></Image>
-                <span>Saladas</span>
+            <button className={botaoAtivo === 5 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Saladas", 5) } value="Saladas">
+                <Image className={estilos.icone_categoria} src={iconeSalada} alt="Ícone saladas"></Image>
+                <span className={estilos.nome_categoria}>Saladas</span>
             </button>
             
-            <button className={estilos.botao_categorias} onClick={ () => handleBuscaCategoria("Sobremesas") } value="Sobremesas">
-                <Image src={iconeSobremesa}  alt="Ícone sobremesas"></Image>
-                <span>Sobremesas</span>
+            <button className={botaoAtivo === 6 ? estiloBotaoAtivo : estiloBotao} onClick={ () => handleBuscaCategoria("Sobremesas", 6) } value="Sobremesas">
+                <Image className={estilos.icone_categoria} src={iconeSobremesa}  alt="Ícone sobremesas"></Image>
+                <span className={estilos.nome_categoria}>Sobremesas</span>
             </button>
 
         </section>
