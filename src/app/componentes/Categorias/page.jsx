@@ -25,8 +25,18 @@ export default function Categorias({setPratos, estadoCategoria, setestadoCategor
         if(estadoCategoria){
 
             setestadoCategoria(!estadoCategoria);
-            setPratos(retornaCardapio());
-            setBotaoAtivo(null);
+
+            if(botaoAtivo === idBotao){
+
+                setBotaoAtivo(null)
+                setPratos(retornaCardapio());
+
+            }else{
+                
+                setBotaoAtivo(idBotao)
+                setPratos(buscaCategoria(categoria));
+            }
+            
         }else{
             
             setestadoCategoria(!estadoCategoria);
